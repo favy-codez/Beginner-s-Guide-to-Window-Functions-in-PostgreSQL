@@ -2,9 +2,9 @@
 
 >**Please make sure you attempt the questions on your own before looking at these solutions.**
 >To view the full list of questions, check the documentation here:
->👉 [View Documentation](https://medium.com/@ezeliorafavour/a-beginner-friendly-guide-to-ctes-common-table-expressions-in-postgresql-bf5f31416b7a)
+>👉 [View Documentation](https://medium.com/@ezeliorafavour/beginners-guide-to-window-functions-in-postgresql-0c290687885b)
 ---
-Solution 1: Add a Row Number for the Entire Table
+### Solution 1: Add a Row Number for the Entire Table
 ```
 SELECT
     employee,
@@ -14,7 +14,7 @@ SELECT
 FROM sales;
 ```
 ---
-Solution 2: Show Each Sale With Total Sales for the Entire Table
+### Solution 2: Show Each Sale With Total Sales for the Entire Table
 ```
 SELECT
     employee,
@@ -24,7 +24,7 @@ SELECT
 FROM sales;
 ```
 ---
-Solution 3: Show Each Employee With the Average Sale Across the Table
+### Solution 3: Show Each Employee With the Average Sale Across the Table
 ```
 SELECT
     employee,
@@ -34,7 +34,7 @@ SELECT
 FROM sales;
 ```
 ---
-Solution 4: Number Employees Within Each Region (Highest to Lowest Sale)
+### Solution 4: Number Employees Within Each Region (Highest to Lowest Sale)
 ```
 SELECT
     employee,
@@ -44,7 +44,7 @@ SELECT
 FROM sales;
 ```
 ---
-Solution 5: Running Total of Sales Within Each Region
+### Solution 5: Running Total of Sales Within Each Region
 ```
 SELECT
     employee,
@@ -54,7 +54,7 @@ SELECT
 FROM sales;
 ```
 ---
-Solution 6: Previous Sale in the Same Region (Using LAG)
+### Solution 6: Previous Sale in the Same Region (Using LAG)
 ```
 SELECT
     employee,
@@ -64,7 +64,7 @@ SELECT
 FROM sales;
 ```
 ---
-Solution 7: Next Sale in the Same Region (Using LEAD)
+### Solution 7: Next Sale in the Same Region (Using LEAD)
 ```
 SELECT
     employee,
@@ -74,7 +74,7 @@ SELECT
 FROM sales;
 ```
 ---
-Solution 8: Employees Above Their Region’s Average
+### Solution 8: Employees Above Their Region’s Average
 ```
 SELECT *
 FROM (
@@ -88,7 +88,7 @@ FROM (
 WHERE amount > region_avg;
 ```
 ---
-Solution 9: Difference Between Each Employee’s Sale and Region Top Sale
+### Solution 9: Difference Between Each Employee’s Sale and Region Top Sale
 ```
 SELECT
     employee,
@@ -98,7 +98,7 @@ SELECT
 FROM sales;
 ```
 ---
-Solution 10: Top 2 Employees by Sales Within Each Region
+### Solution 10: Top 2 Employees by Sales Within Each Region
 ```
 SELECT *
 FROM (
